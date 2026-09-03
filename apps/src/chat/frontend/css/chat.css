@@ -21,7 +21,6 @@
     font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-size: var(--uni-font-size);
 }
 
@@ -1083,4 +1082,70 @@ body {
         transition-duration: .01ms !important;
         animation-duration: .01ms !important;
     }
+}
+
+:root {
+    --chat-bg: #090b1d;
+    --chat-panel: #11142c;
+    --chat-panel-soft: #151a37;
+    --chat-hover: rgba(124, 104, 244, .16);
+    --chat-line: rgba(174, 184, 227, .14);
+    --chat-ink: #f5f7ff;
+    --chat-muted: #9da6c4;
+    --chat-subtle: #727c9c;
+    --chat-purple: #7c68f4;
+    --chat-cyan: #79e4d0;
+}
+
+body { background: var(--chat-bg); color: var(--chat-ink); }
+.container, .container * { box-sizing: border-box; }
+.container { border-color: var(--chat-line); background: var(--chat-bg); }
+.sidebar, .chat-list, .users-list { background: var(--chat-panel); border-color: var(--chat-line); }
+.chat-area { background: var(--chat-panel-soft); }
+.btn-1, .users .user .right .unread-count { background: var(--chat-purple); }
+.btn-1:hover { background: #8e7cff; }
+.btn-2:hover, .users .user:hover { color: var(--chat-ink); background: var(--chat-hover); }
+.btn-2, .title, .name, .settings-panel header .title { color: var(--chat-ink); }
+.separator, .chat-area header, .chat-area footer, .users-list footer { border-color: var(--chat-line); }
+.input-1, .chat-input-container { background: #1b2040; border-color: var(--chat-line); color: var(--chat-ink); }
+.input-1 input, .input-1 textarea, .chat-input { color: var(--chat-ink); background: transparent; }
+.input-1 input::placeholder, .input-1 textarea::placeholder { color: var(--chat-subtle); }
+.chat-list-return, .users-list-return, .settings-close { color: var(--chat-subtle); }
+.chat-list-return:hover, .users-list-return:hover { color: var(--chat-cyan); background: rgba(121, 228, 208, .12); }
+.users .user .content .message, .users .user .right .meta .time, .users-list-footer, .delete-account-message { color: var(--chat-muted); }
+.settings-panel, .delete-account-dialog { background: var(--chat-panel); border-color: var(--chat-line); box-shadow: 0 24px 70px rgba(0, 0, 0, .35); }
+.settings-profile { background: linear-gradient(135deg, #1b2044, #11152f); border-color: var(--chat-line); }
+.settings-profile .name, .settings-action strong { color: var(--chat-ink); }
+.settings-action { background: #151a37; color: var(--chat-muted); }
+.settings-action:hover { border-color: rgba(121, 228, 208, .35); background: var(--chat-hover); }
+.settings-action-icon { background: rgba(124, 104, 244, .2); color: #a998ff; }
+.settings-action small { color: var(--chat-subtle); }
+.settings-action.danger { background: rgba(217, 45, 32, .08); }
+.settings-panel footer { border-color: var(--chat-line); }
+.message-2 { background: #222849; color: #d7dcf6; }
+.sidebar footer .profile { background: #1b2040; border: 1px solid var(--chat-line); }
+.users .user { border-color: var(--chat-line); background: #1b2040; box-shadow: 0 5px 14px rgba(0, 0, 0, .12); }
+.users .user:hover { border-color: rgba(121, 228, 208, .28); background: #252b50; box-shadow: 0 10px 24px rgba(0, 0, 0, .2); }
+.users .user .content .name { color: var(--chat-ink); }
+.users .user .right .unread-count { border-color: #1b2040; }
+.users-list-card { border-color: var(--chat-line); background: #1b2040; }
+.users-list-card:hover { border-color: rgba(121, 228, 208, .28); background: #252b50; }
+.users-list-card .name { color: var(--chat-ink); }
+.chat-area footer .input-box { background: #11142c; border-color: var(--chat-line); }
+.chat-area footer .input-box:focus-within { background: #151a37; border-color: rgba(121, 228, 208, .4); }
+.chat-area header .user .content .name { color: var(--chat-ink); }
+.chat-area header .actions .icon { color: var(--chat-muted); }
+.chat-area header .actions .icon:hover { background: var(--chat-hover); color: var(--chat-cyan); }
+.sidebar header .title,
+.chat-list header > .title,
+.users-list header > .title { color: var(--chat-ink); }
+.btn-2,
+.sidebar .chats-btn { color: var(--chat-muted); }
+.btn-2:hover,
+.sidebar .chats-btn { border-color: rgba(121, 228, 208, .22); background: var(--chat-hover); color: var(--chat-cyan); }
+
+@media (max-width: 762px) {
+    .container { width: calc(100% - 16px); }
+    .chat-list { width: 100%; min-width: 0; }
+    .users-list { width: 100%; min-width: 0; }
 }

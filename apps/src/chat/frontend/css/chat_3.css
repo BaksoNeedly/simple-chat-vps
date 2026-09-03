@@ -18,7 +18,8 @@
     flex-direction: column;
     gap: 30px;
     height: var(--height);
-    border-right: 1px solid lightgray;
+    border-right: 1px solid rgba(174, 184, 227, .14);
+    background: #11142c;
     padding: var(--sidebar-padding);
     overflow-x: auto;
 }
@@ -39,21 +40,21 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    color: black;
+    color: #f5f7ff;
     padding: 16px 10px;
     border-radius: 10px;
 }
 
 .group-chat:hover{
-    background-color: rgb(196, 220, 254);
-    color: rgb(42, 41, 41);
+    background-color: rgba(124, 104, 244, .16);
+    color: #f5f7ff;
 }
 
 .users-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgba(174, 184, 227, .14);
     padding: var(--sidebar-padding);
     margin-left: calc(0px - var(--sidebar-padding));
     margin-right: calc(0px - var(--sidebar-padding));
@@ -64,7 +65,7 @@
 .user-2-profile-icon {
     width: 50px;
     height: 50px;
-    background-color: lightgray;
+    background-color: #252b50;
     border-radius: 100%;
 }
 
@@ -72,13 +73,13 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    color: black;
+    color: #f5f7ff;
     padding: 16px 10px;
     border-radius: 10px;
 }
 
 .user-2-room:hover {
-    background-color: lightblue;
+    background-color: rgba(121, 228, 208, .12);
 }
 
 .user-profile {
@@ -88,7 +89,7 @@
     margin-bottom: calc(0px - var(--sidebar-padding));
 
     padding: var(--sidebar-padding);
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgba(174, 184, 227, .14);
 
     display: flex;
     align-items: center;
@@ -108,12 +109,14 @@
 
 .profile-arrow:hover {
     transform: scale(1.1);
-    background-color: lightgray;
+    background-color: rgba(121, 228, 208, .12);
 }
 
 .container {
     display: flex;
     overflow-y: hidden;
+    background: #090b1d;
+    color: #f5f7ff;
 }
 
 .chat-area {
@@ -125,7 +128,7 @@
 
 .chat-header {
     padding: var(--padding);
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid rgba(174, 184, 227, .14);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -141,7 +144,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: lightblue;
+    color: #79e4d0;
 }
 
 .chat-footer{
@@ -153,7 +156,8 @@
     display: flex;
     align-items: center;
     border-radius: var(--uni-border-radius);
-    border: 1px solid lightgray;
+    border: 1px solid rgba(174, 184, 227, .14);
+    background: #151a37;
     padding: 5px 10px;
 }
 

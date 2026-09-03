@@ -7,11 +7,11 @@ body {
     align-items: center;
 
     padding: 24px;
-    color: #172033;
+    color: #f5f7ff;
     background:
         radial-gradient(circle at 10% 10%, rgba(99, 102, 241, .18), transparent 32%),
         radial-gradient(circle at 90% 90%, rgba(14, 165, 233, .16), transparent 34%),
-        #f5f7fb;
+        #090b1d;
 }
 
 p {
@@ -28,14 +28,14 @@ a {
     /* width: min(500px, 100%); */
     width: 100%;
     max-width: 430px;
-    background: rgba(255, 255, 255, .94);
+    background: rgba(17, 20, 44, .96);
     display: flex;
     flex-direction: column;
     padding: 38px;
     gap: 22px;
-    border: 1px solid rgba(255, 255, 255, .85);
+    border: 1px solid rgba(174, 184, 227, .14);
     border-radius: 24px;
-    box-shadow: 0 24px 70px rgba(30, 41, 59, .14);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
     backdrop-filter: blur(12px);
 }
 
@@ -47,13 +47,13 @@ a {
 }
 
 .title {
-    color: #111827;
+    color: #f5f7ff;
     font-size: 28px;
     letter-spacing: -.6px;
 }
 
 .sub-title {
-    color: #667085;
+    color: #9da6c4;
 }
 
 .card-form {
@@ -69,7 +69,7 @@ a {
 }
 
 .field p {
-    color: #344054;
+    color: #aeb8e3;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .2px;
@@ -93,7 +93,7 @@ a {
 }
 
 .remember-me p {
-    color: #667085;
+    color: #9da6c4;
 }
 
 @media (max-width: 520px) {

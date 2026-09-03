@@ -23,7 +23,7 @@
 }
 
 .button-5 {
-    background: rgb(63, 107, 230);
+    background: #7c68f4;
     width: 100%;
     border-radius: 10px;
     padding: 12px 20px;
@@ -117,12 +117,12 @@ body {
     height: 40px;
     padding: 8px;
     border-radius: 8px;
-    color: rgb(43, 120, 243);
+    color: #79e4d0;
     transition: 0.2s ease;
 }
 
 .sidebar-left-narrow svg:hover {
-    background-color: rgba(43, 120, 243, 0.299);
+    background-color: rgba(121, 228, 208, .12);
 }
 
 .sidebar-left-narrow footer {
@@ -152,7 +152,7 @@ body {
     align-items: center;
     justify-content: space-between;
     font-size: x-large;
-    color: rgb(43, 120, 243);
+    color: #79e4d0;
 }
 
 .sidebar-left-chat header .title .arrow{
@@ -163,7 +163,7 @@ body {
 }
 
 .sidebar-left-chat header .title .arrow:hover {
-    background-color: rgba(43, 120, 243, 0.219);
+    background-color: rgba(121, 228, 208, .12);
 }
 
 .sidebar-left-chat .start-chat {

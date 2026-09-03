@@ -1,6 +1,6 @@
 .verified-card { gap: 24px; }
 .verified-header { gap: 12px; }
-.verified-icon { display: grid; width: 72px; height: 72px; place-items: center; margin-bottom: 4px; border-radius: 50%; background: #ecfdf3; color: #039855; box-shadow: 0 0 0 8px #f3fdf7; }
+.verified-icon { display: grid; width: 72px; height: 72px; place-items: center; margin-bottom: 4px; border-radius: 50%; background: rgba(121, 228, 208, .14); color: #79e4d0; box-shadow: 0 0 0 8px rgba(121, 228, 208, .06); }
 .verified-icon svg { width: 38px; height: 38px; }
 .verified-copy { max-width: 330px; line-height: 1.6; text-align: center; }
 .verified-body { display: flex; flex-direction: column; gap: 20px; }
