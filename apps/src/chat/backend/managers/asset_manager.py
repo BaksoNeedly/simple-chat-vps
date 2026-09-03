@@ -21,7 +21,7 @@ class AssetManager:
 
             full_path = parent / directory / file_name
             
-            print(full_path)
+            # print(full_path)
 
             if ext == "jpg":
                 with open(full_path, "rb") as file:

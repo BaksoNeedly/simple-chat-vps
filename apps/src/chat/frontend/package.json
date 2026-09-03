@@ -1,0 +1,14 @@
+{
+    "name": "simple-chat",
+    "version": "1.0.0",
+    "private": true,
+    "type": "commonjs",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/client.js",
+        "dev": "tsc --watch"
+    },
+    "devDependencies": {
+        "typescript": "^7.0.2"
+    }
+}

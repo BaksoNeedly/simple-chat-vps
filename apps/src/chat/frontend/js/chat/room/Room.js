@@ -44,7 +44,7 @@ export default class Room {
      * @param {Member} member
      */
     addMember(member){
-        this.#members[member.getName()] = member;
+        this.#members[member.getUsername()] = member;
     }
 
     getMessages(){

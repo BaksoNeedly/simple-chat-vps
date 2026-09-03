@@ -282,7 +282,7 @@ export default class ChatApp {
                 ChatService.uploadFile(message.getFile());
             }
             this.chatAreaUI.getBodyUI().addSentMessage(message);
-            this.chatListUI.getBodyUI().setSpecificContact();
+            // this.chatListUI.getBodyUI().setSpecificContact(conta);
         });
 
         // File Attachment Events
