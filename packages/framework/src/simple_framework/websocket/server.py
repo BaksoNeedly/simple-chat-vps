@@ -45,33 +45,33 @@ class WebSocketServer:
         print(client_session.get_username(), "connected.")
         print(len(ClientSessionManager.get_all()), "Users.")
         
-        # try:
-        while True:
-            raw_frame = client_socket.recv(server_config.BUFFER_SIZE)
-            if not raw_frame:
-                return
+        try:
+            while True:
+                raw_frame = client_socket.recv(server_config.BUFFER_SIZE)
+                if not raw_frame:
+                    return
 
-            # DEBUG
-            # print("Payload:", WebSocketFrame.parse(raw_frame))
+                # DEBUG
+                # print("Payload:", WebSocketFrame.parse(raw_frame))
 
-            opcode = raw_frame[0] & 0b00001111
-            if opcode == 0b00001000: # Close frame
-                print("CLOSE FRAME DETECTED.")
-                break
+                opcode = raw_frame[0] & 0b00001111
+                if opcode == 0b00001000: # Close frame
+                    print("CLOSE FRAME DETECTED.")
+                    break
 
-            self._router.route(raw_frame, client_session)
-        # except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
-        #     # The browser can close the socket when navigating to another page.
-        #     pass
-        # except OSError as e:
-        #     # Windows reports a normal client-side disconnect as 10053/10054.
-        #     if getattr(e, "winerror", None) not in (10053, 10054):
-        #         print(f"Error occurred while handling WebSocket connection: {e}")
-        # except Exception as e:
-        #     print(f"Error occurred while handling WebSocket connection: {e}")
-        # finally:
-        #     ClientSessionManager.close(client_session)
-        #     print("CLOSED")
+                self._router.route(raw_frame, client_session)
+        except (ConnectionAbortedError, ConnectionResetError, BrokenPipeError):
+            # The browser can close the socket when navigating to another page.
+            pass
+        except OSError as e:
+            # Windows reports a normal client-side disconnect as 10053/10054.
+            if getattr(e, "winerror", None) not in (10053, 10054):
+                print(f"Error occurred while handling WebSocket connection: {e}")
+        except Exception as e:
+            print(f"Error occurred while handling WebSocket connection: {e}")
+        finally:
+            ClientSessionManager.close(client_session)
+            print("CLOSED")
 
 
     # @classmethod
