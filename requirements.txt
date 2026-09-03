@@ -1,0 +1,7 @@
+# Local packages
+-e ./packages/framework
+-e ./apps
+
+# Runtime dependencies
+bcrypt>=4.0
+psycopg[binary]>=3.0
