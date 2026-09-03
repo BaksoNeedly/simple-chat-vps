@@ -1,0 +1,15 @@
+.error-card { gap: 24px; }
+.error-header { gap: 10px; }
+.error-icon {
+    display: grid;
+    width: 72px;
+    height: 72px;
+    place-items: center;
+    margin-bottom: 4px;
+    border-radius: 50%;
+    background: #fff4ed;
+    color: #e04f16;
+    box-shadow: 0 0 0 8px #fff9f5;
+}
+.error-icon svg { width: 38px; height: 38px; }
+.error-copy { max-width: 340px; line-height: 1.6; text-align: center; }

@@ -1,59 +1,65 @@
-backend/
-├── server.py
-├── config.py
+Simple Chat/
+├── packages/
+│   ├── framework/
+│   │   ├── pyproject.toml
+│   │   └── src/simple_framework/
+│   │       ├── http/
+│   │       │   ├── server.py
+│   │       │   ├── request.py
+│   │       │   ├── response.py
+│   │       │   ├── parser.py
+│   │       │   └── router.py
+│   │       ├── websocket/
+│   │       │   ├── server.py
+│   │       │   ├── frame.py
+│   │       │   ├── handshake.py
+│   │       │   └── broadcaster.py
+│   │       ├── database/
+│   │       │   └── manager.py
+│   │       ├── session/
+│   │       ├── cookie/
+│   │       ├── routing/
+│   │       ├── storage/
+│   │       ├── serialization/
+│   │       └── utils/
+│   │
+│   └── framework-js/
+│       └── src/
+│           ├── WebSocketClient.js
+│           └── ApiResponse.js
 │
-├── database/
-│   ├── database_manager.py
-│   └── schema.sql
+├── apps/
+│   └── chat/
+│       ├── backend/
+│       │   ├── app.py
+│       │   ├── routes.py
+│       │   ├── websocket_routes.py
+│       │   ├── auth/
+│       │   │   ├── controllers.py
+│       │   │   ├── models.py
+│       │   │   ├── repositories.py
+│       │   │   └── services.py
+│       │   ├── users/
+│       │   ├── rooms/
+│       │   ├── messages/
+│       │   ├── contacts/
+│       │   ├── files/
+│       │   └── packets/
+│       │
+│       ├── frontend/
+│       │   ├── html/
+│       │   ├── css/
+│       │   ├── js/
+│       │   │   ├── auth/
+│       │   │   └── chat/
+│       │   └── img/
+│       │
+│       ├── migrations/
+│       │   └── chat_schema.sql
+│       │
+│       └── config/
+│           ├── settings.py
+│           └── tables.py
 │
-├── models/
-│   ├── user.py
-│   ├── room.py
-│   └── message.py
-│
-├── repositories/
-│   ├── user_repository.py
-│   ├── contact_repository.py
-│   ├── room_repository.py
-│   └── message_repository.py
-│
-├── services/
-│   ├── auth_service.py
-│   ├── user_service.py
-│   ├── contact_service.py
-│   ├── room_service.py
-│   ├── message_service.py
-│   └── storage_service.py
-│
-├── controllers/
-│   ├── auth_controller.py
-│   ├── user_controller.py
-│   ├── room_controller.py
-│   ├── chat_controller.py
-│   ├── file_controller.py
-│   └── page_controller.py
-│
-├── http/
-│   ├── http_server.py
-│   ├── http_request.py
-│   ├── http_response.py
-│   ├── http_router.py
-│   └── http_parser.py
-│
-├── websocket/
-│   ├── websocket_server.py
-│   ├── websocket_router.py
-│   ├── websocket_frame.py
-│   └── websocket_broadcaster.py
-│
-├── packets/
-│   ├── http/
-│   └── websocket/
-│
-├── session/
-│   ├── session.py
-│   ├── session_manager.py
-│   ├── client_session.py
-│   └── client_session_manager.py
-│
-└── utils/
+├── run.py
+└── tests/

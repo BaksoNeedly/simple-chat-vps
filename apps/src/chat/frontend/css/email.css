@@ -1,0 +1,15 @@
+.email-return {
+    align-self: center;
+    color: #667085;
+    font-size: 13px;
+}
+
+.email-return:hover {
+    color: #4f46e5;
+}
+
+.email-message {
+    min-height: 18px;
+    color: #d92d20;
+    text-align: center;
+}

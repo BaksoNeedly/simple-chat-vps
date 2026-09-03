@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simple-chat"
+version = "0.1.0"
+description = "Chat application built with simple framework"
+requires-python = ">=3.10"
+dependencies = [
+    "bcrypt>=4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["chat*"]

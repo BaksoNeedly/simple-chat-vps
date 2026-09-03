@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/email.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="card">
+        <header class="header">
+            <h1 class="title">Reset password</h1>
+            <p class="sub-title">Enter your email address to reset your password</p>
+        </header>
+        <div class="divider"><hr></div>
+        <form class="card-form" action="/reset/password/request" method="POST">
+            <div class="field">
+                <p>Username</p>
+                <input class="input-1 username" type="text" name="username" placeholder="Enter your username" autocomplete="username" required>
+            </div>
+            <div class="field">
+                <p>Email</p>
+                <input class="input-1 email" type="email" name="email" placeholder="Enter your email" autocomplete="email" required>
+            </div>
+            <p id="email-message" class="email-message" role="alert"></p>
+            <div class="action-buttons">
+                <button class="button-1" type="submit">Continue</button>
+            </div>
+        </form>
+        <a class="email-return" href="/page/login">Return to login</a>
+    </main>
+    <script type="module" src="../js/auth/email/Email.js"></script>
+</body>
+</html>

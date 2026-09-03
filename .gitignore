@@ -5,6 +5,11 @@ __pycache__/
 # Ignore environment files containing secrets
 .env
 
+# Ignore local database credentials
+config/database_secret.py
+
+secret.py
+
 # Ignore dependencies folder
 node_modules/
 venv/
@@ -25,3 +30,7 @@ storage/
 
 road.txt
 idk.txt
+
+.vscode/
+
+framework-client
