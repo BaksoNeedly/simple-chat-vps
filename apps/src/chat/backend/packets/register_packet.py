@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from simple_framework.utils.json_parser import JSONParser
 
 from .packet import Packet
