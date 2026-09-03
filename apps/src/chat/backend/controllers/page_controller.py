@@ -9,6 +9,10 @@ from .asset_controller import AssetController
 class PageController:
 
     @staticmethod
+    def serve_home_page(request: HTTPRequest) -> HTTPResponse:
+        return AssetController.serve_response("home.html")
+
+    @staticmethod
     def serve_login_page(request: HTTPRequest) -> HTTPResponse:
         cookie = request.get_headers().get("cookie")
         session_id = None

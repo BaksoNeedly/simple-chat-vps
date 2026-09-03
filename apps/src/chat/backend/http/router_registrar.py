@@ -42,7 +42,8 @@ class HttpRouterRegistrar:
         )
 
         # Main
-        self._router.get("/", PageController.serve_login_page)
+        self._router.get("/", PageController.serve_home_page)
+        self._router.get("/page/home", PageController.serve_home_page)
 
         # CSS and images
         self._register_assets(
@@ -51,6 +52,7 @@ class HttpRouterRegistrar:
                 ("/css/form.css", "form.css"),
                 ("/css/success.css", "success.css"),
                 ("/css/chat.css", "chat.css"),
+                ("/css/home.css", "home.css"),
                 ("/css/error.css", "error.css"),
                 ("/css/email.css", "email.css"),
                 ("/img/user_icon.jpg", "user_icon.jpg"),
