@@ -1,3 +1,5 @@
+from collections.abc import Callable
+
 from .request import HTTPRequest
 from .response import HTTPResponse
 
@@ -8,10 +10,10 @@ class HTTPRouter:
         self._dynamic_handlers = {}
 
 
-    def get(self, path: str, handler: callable):
+    def get(self, path: str, handler: Callable):
         self.register("GET", path, handler)
 
-    def post(self, path: str, handler: callable):
+    def post(self, path: str, handler: Callable):
         self.register("POST", path, handler)
 
     def route(self, request: HTTPRequest) -> HTTPResponse | None:
@@ -24,10 +26,10 @@ class HTTPRouter:
 
         return handler(request)
     
-    def register(self, method: str, path: str, handler: callable) -> None:
+    def register(self, method: str, path: str, handler: Callable) -> None:
         self._routes[(method.upper(), path)] = handler
 
-    def resolve(self, method: str, path: str) -> callable|None:
+    def resolve(self, method: str, path: str) -> Callable | None:
         handler = self._routes.get((method.upper(), path))
         if handler:
             return handler

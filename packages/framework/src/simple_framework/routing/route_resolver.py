@@ -1,16 +1,18 @@
+from collections.abc import Callable
+
 class RouteResolver:
 
     def __init__(self):
         self._routes = {}
         self._dynamic_handlers = {}
 
-    def register(self, method: str, path: str, handler: callable) -> None:
+    def register(self, method: str, path: str, handler: Callable) -> None:
         self._routes[(method.upper(), path)] = handler
 
-    # def register_dynamic(self, route_key: str, handler: callable) -> None:
+    # def register_dynamic(self, route_key: str, handler: Callable) -> None:
     #     self._dynamic_handlers[route_key] = handler
 
-    def resolve(self, method: str, path: str) -> callable|None:
+    def resolve(self, method: str, path: str) -> Callable | None:
         handler = self._routes.get((method.upper(), path))
         if handler:
             return handler

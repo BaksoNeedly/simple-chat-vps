@@ -1,3 +1,5 @@
+from collections.abc import Callable
+
 from config import server_config
 import socket
 from ..http.request import HTTPRequest
@@ -14,16 +16,17 @@ class WebSocketServer:
     def __init__(self):
         self._router = WebSocketRouter()
         
-        self._access_hooks: list[callable] = []
+        self._access_hooks: list[Callable] = []
         
     def get_router(self) -> WebSocketRouter:
         return self._router
     
-    def get_access_hooks(self) -> list[callable]:
+    def get_access_hooks(self) -> list[Callable]:
         return self._access_hooks
     
-    def add_access_hook(self, hook: callable) -> callable:
-        return self._access_hooks.append(hook)
+    def add_access_hook(self, hook: Callable) -> Callable:
+        self._access_hooks.append(hook)
+        return hook
     
     def handle(self, client_socket: socket.socket, request: HTTPRequest) -> None:
         WebSocketHandshake.perform(client_socket, request)
