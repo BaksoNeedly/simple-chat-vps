@@ -1,6 +1,6 @@
 # Local packages
--e ./packages/framework
--e ./apps
+-e ./packages/framework  # simple-framework
+-e ./apps  # simple-chat / chat
 
 # Runtime dependencies
 bcrypt>=4.0
