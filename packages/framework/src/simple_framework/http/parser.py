@@ -9,7 +9,14 @@ class HTTPParser:
         header = request[:header_end]
         header_text = header.decode(app_config.ENCODING)
         lines = header_text.split("\r\n")
-        method, path, version = lines[0].split(" ", 2)
+        
+        request_line = lines[0].split(" ", 2)
+        if len(request_line) == 3:
+            method, path, version = request_line
+        else:
+            method = request_line[0] if request_line else "none"
+            path = "none"
+            version = "none"
 
         body = request[header_end + 4:]
 

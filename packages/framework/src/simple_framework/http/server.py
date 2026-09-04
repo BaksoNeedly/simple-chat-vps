@@ -78,7 +78,6 @@ class HTTPServer:
 
             if upgrade and connection:
                 self._websocket_server.handle(client_socket, request)
-                print("lewat")
                 return
 
             # self.write_log(data.decode(app_config.ENCODING))
