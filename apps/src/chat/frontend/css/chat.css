@@ -1149,3 +1149,78 @@ body { background: var(--chat-bg); color: var(--chat-ink); }
     .chat-list { width: 100%; min-width: 0; }
     .users-list { width: 100%; min-width: 0; }
 }
+
+/* Keep the chat navigation and workspace aligned with the dark app theme. */
+.container,
+.sidebar,
+.chat-list,
+.users-list,
+.chat-area,
+.chat-area header,
+.chat-area footer {
+    background-color: var(--chat-bg);
+}
+
+.sidebar,
+.chat-list,
+.users-list {
+    background-color: var(--chat-panel);
+}
+
+.chat-area {
+    background-color: var(--chat-panel-soft);
+}
+
+.chat-area header,
+.chat-area footer {
+    background-color: var(--chat-panel-soft);
+}
+
+.new-chat {
+    background-color: var(--chat-panel);
+    border: 1px solid var(--chat-line);
+    color: var(--chat-ink);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, .35);
+}
+
+.new-chat .title,
+.new-chat header .user .content .name {
+    color: var(--chat-ink);
+}
+
+.new-chat header .user {
+    border-color: var(--chat-line);
+    background: #151a37;
+}
+
+.new-chat .input-box {
+    background: #1b2040;
+    border-color: var(--chat-line);
+}
+
+.new-chat .input {
+    color: var(--chat-ink);
+    background: transparent;
+    outline: none;
+}
+
+.new-chat .input::placeholder {
+    color: var(--chat-subtle);
+}
+
+.new-chat .input-box:focus-within {
+    border-color: rgba(121, 228, 208, .4);
+    background: #151a37;
+    box-shadow: 0 0 0 4px rgba(121, 228, 208, .1);
+}
+
+.new-chat .btn-5 {
+    border-color: var(--chat-line);
+    background: #151a37;
+    color: var(--chat-muted);
+}
+
+.new-chat .btn-5:hover {
+    background: var(--chat-hover);
+    color: var(--chat-cyan);
+}
